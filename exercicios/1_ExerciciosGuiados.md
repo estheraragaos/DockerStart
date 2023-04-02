@@ -15,7 +15,7 @@
 -d mysql:8.0
 ```
 
-![Pull container MySQL](./imagens/exegui1_pullmysql.png)
+![Pull container MySQL](./respostas_imagens/exe1_img1.png)
 
 Vamos entender cada um dos itens do comando:
 
@@ -30,7 +30,7 @@ Vamos entender cada um dos itens do comando:
 ```
 # docker ps
 ```
-![Pull container MySQL](./imagens/exegui1_dockerps.png)
+![Pull container MySQL](./respostas_imagens/exe1_img2.png)
 
 #### Com este comando conseguimos visualizar todos os containers em execução no nosso host no momento e para o nosso exemplo é um sinal de que tudo esta rodando perfeitamente.
 </br>
@@ -41,7 +41,7 @@ Vamos entender cada um dos itens do comando:
 # docker exec -it mysql-basic /bin/bash
 ```
 
-![Pull container MySQL](./imagens/exegui1_itbash.png)
+![Pull container MySQL](./respostas_imagens/exe1_img3.png)
 
 Vamos entender cada um dos itens do comando:
 
@@ -60,7 +60,7 @@ Vamos entender cada um dos itens do comando:
 ```
 # mysql -uroot -pr00tpa55
 ```
-![Pull container MySQL](./imagens/exegui1_acessmysql.png)
+![Pull container MySQL](./respostas_imagens/exe1_img4.png)
 
 O comando mysql abre o prompt interativo do banco de dados MySQL. 
 
@@ -68,7 +68,7 @@ Para visualizar todas as databases:
 ```
 # show databases;
 ```
-![Pull container MySQL](./imagens/exegui1_showdb.png)
+![Pull container MySQL](./respostas_imagens/exe1_img5.png)
 
 #### 3.2 Vamos criar uma tabela dentro da database items. Para conseguir criar uma tabel é preciso primeiro selecionar qual database vamos utilizar.
 
@@ -76,7 +76,7 @@ Para visualizar todas as databases:
 # use items;
 ```
 
-![Pull container MySQL](./imagens/exegui1_usedb.png)
+![Pull container MySQL](./respostas_imagens/exe1_img6.png)
 
 #### 3.3 Vamos criar uma tablea chamada Projects.
 
@@ -86,46 +86,43 @@ name varchar(255) DEFAULT NULL,
 code varchar(255) DEFAULT NULL,
 PRIMARY KEY (id));
 ```
-![Pull container MySQL](./imagens/exegui1_createtable.png)
+![Pull container MySQL](./respostas_imagens/exe1_img7.png)
 
 #### 3.4 Usar show tables para visualizar as tabelas existentes.
 
 ```
 # show tables;
 ```
-![Pull container MySQL](./imagens/exegui1_showtbprojects.png)
+![Pull container MySQL](./respostas_imagens/exe1_img8.png)
 
 #### 3.5 Vamos inserir algumas informações na nossa tabela. E depois de criada, vamos então visualizar as informações dentro da tabela.
 
 ```
 insert into Projects (id, name, code) values (1,'docker','IBM');
 ```
-![Pull container MySQL](./imagens/exegui1_inserttb.png)
+![Pull container MySQL](./respostas_imagens/exe1_img9.png)
 
 ```
 select * from Projects;
 ```
 
-![Pull container MySQL](./imagens/exegui1_select.png)
+![Pull container MySQL](./respostas_imagens/exe1_img10.png)
 
 #### 3.6 Para sair do container basta digitar exit duas vezes e para finaliza-lo docker stop.
 
 ```
 exit
 ```
-![Pull container MySQL](./imagens/exegui1_exit.png)
+![Pull container MySQL](./respostas_imagens/exe1_img11.png)
 
 Mesmo saindo do container ele ainda esta sendo executado.
 
-![Pull container MySQL](./imagens/exegui1_dockerps.png)
+![Pull container MySQL](./respostas_imagens/exe1_img12.png)
 
 Para finaiza-lo basta executar:
 
 ```
 # docker stop mysql-basic
 ```
-![Pull container MySQL](./imagens/exegui1_stop.png)
-
-![Pull container MySQL](./imagens/exegui1_dockerpsstop.png)
-
+![Pull container MySQL](./respostas_imagens/exe1_img13.png)
 
